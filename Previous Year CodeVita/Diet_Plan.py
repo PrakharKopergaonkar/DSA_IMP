@@ -18,4 +18,4 @@ while(len(items)):
         max_nutrients[2]-=curr_item[2]
         items.append(curr_item)
 
-print(max_nutrients)
+print(max_nutrients[0], max_nutrients[1], max_nutrients[2])
