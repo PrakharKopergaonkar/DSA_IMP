@@ -26,8 +26,8 @@ class Solution:
                 low[u] = min(low[u],In[i])   
     def Bridge(self):
         visited = [False]*(self.N)
-        In = [float('Inf')]*(self.N) #In time indicates when you entered the node
-        low = [float('Inf')]*(self.N) #low time indicates lowest ancestor where you can reach
+        In = [sys.maxsize]*(self.N) #In time indicates when you entered the node
+        low = [sys.maxsize]*(self.N) #low time indicates lowest ancestor where you can reach
         parent = [-1]*(self.N)
 
         for i in range(0,self.N):
@@ -54,6 +54,3 @@ for i in range(0,len(result)):
     if(not visited[result[i][1]]):
         visited[result[i][1]] = True
         print(result[i][1]) 
-
-
-
