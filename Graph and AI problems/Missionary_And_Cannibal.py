@@ -18,6 +18,7 @@ def Missionary_cannibals(initial_state, goal_state):
             else:
                 curr_state_M, curr_state_P,curr_state_direction = curr_state
                 opposite_state_M, opposite_state_P,opposite_state_direction = 3 - curr_state_M, 3 - curr_state_P, directions[curr_state_direction]
+                #If the boat is on left side of bank
                 if((curr_state_M>=curr_state_P or curr_state_M==0) and (opposite_state_M>=opposite_state_P or opposite_state_M==0) and curr_state_direction==1):
                     if(curr_state_M>0 and (curr_state_M-1,curr_state_P,opposite_state_direction) not in history):
                         queue.append((curr_state_M-1,curr_state_P,opposite_state_direction))
@@ -34,6 +35,7 @@ def Missionary_cannibals(initial_state, goal_state):
                     if(curr_state_P>0 and curr_state_M>0 and (curr_state_M-1,curr_state_P-1,opposite_state_direction) not in history):
                         queue.append((curr_state_M-1,curr_state_P-1,opposite_state_direction))
                         history.add((curr_state_M-1,curr_state_P-1,opposite_state_direction))
+                #If the boat is on right side of bank
                 if((curr_state_M>=curr_state_P or curr_state_M==0) and (opposite_state_M>=opposite_state_P or opposite_state_M==0) and curr_state_direction==0):
                     if(opposite_state_M>0 and (curr_state_M+1,curr_state_P,opposite_state_direction) not in history):
                         queue.append((curr_state_M+1,curr_state_P,opposite_state_direction))
