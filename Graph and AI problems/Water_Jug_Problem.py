@@ -1,3 +1,5 @@
+# You are given two jugs of 4, 3 litre capacity respectively (initialy empty), a tap of unlimited supply, and a ground. You have to fill the jug of 4 litre capacity upto 2 litres.
+#Solution is calculated using BFS algorithm with each step calculating all possible cases that can be generated from it.
 def water_jug(initial_state):
     history = set()
     queue = [initial_state]
@@ -8,7 +10,7 @@ def water_jug(initial_state):
         print(queue)
         for i in range(0,length):
             curr_state = queue.pop(0)
-            print("current state is {}".format(curr_state))
+            print("current state is: {}".format(curr_state))
             if(curr_state[0]==2):
                 print("End reached")
                 return cost
