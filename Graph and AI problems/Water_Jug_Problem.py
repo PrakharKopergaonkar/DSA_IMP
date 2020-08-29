@@ -39,5 +39,6 @@ def water_jug(initial_state):
                 history.add((0,curr_state[0]+curr_state[1]))
                 queue.append((0,curr_state[0]+curr_state[1]))
         cost+=1
+    print("Impossible to reach desired state")
 initial_state = (0,0)
 print(water_jug(initial_state))
