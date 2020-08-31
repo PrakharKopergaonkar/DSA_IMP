@@ -5,7 +5,7 @@
 # In this we first count primes set (defaultdict(list)) that store indexes it divide
 # For example for [4,6,15,35] prime_set would be {2:[0,1],3:[1,2],5:[2,3],7:[3]}
 # The for each list we peform union operation
-# At the end We find parent for each number and using counter return max frequent number  
+# At the end We find parent for each number and using counter return frequency of max frequent parent  
 
 import math
 from collections import defaultdict, Counter
